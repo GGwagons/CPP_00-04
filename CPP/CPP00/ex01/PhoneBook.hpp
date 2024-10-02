@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 22:49:27 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/01 16:49:37 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/02 15:24:21 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,12 @@ class	PhoneBook {
 	private:
 			int			_index;
 			Contact	_contacts[8];
-			void	_number(std::string &input);	
+			void	_number(std::string &input);
+			void	_printCheck(std::string &str);
 	public:
 			PhoneBook();
 			void		search();
 			void		add();
-			
-			// int			getIndex() const;
-			// void		setIndex(int i);
-
 			void		size(Contact &mCont);
 			std::string	getContacts() const;
 };

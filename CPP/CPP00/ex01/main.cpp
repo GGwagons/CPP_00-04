@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 22:49:19 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/01 19:07:31 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/02 14:15:36 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,9 @@ int	main() {
 			return (1);
 		else if (input == "ADD")
 			mBook.add();
-		else if (input == "SEARCH")
+		else if (input == "SEARCH") {
 			mBook.search();
+		}
 	}
 	return (0);
 }

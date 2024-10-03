@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 22:49:19 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/02 14:15:36 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/03 14:42:12 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main() {
 	std::string input;
 	start_print();
 	while (1) {
-		std::cin >> input;
+		std::getline(std::cin, input);
 		if (std::cin.eof())
 			return (1);
 		input = mega(input);

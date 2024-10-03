@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 22:49:24 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/01 17:29:47 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/03 14:16:56 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <sstream>
 
 class	Contact {
 	private:
@@ -27,6 +28,7 @@ class	Contact {
 			std::string	setField(std::string &str);
 	public:
 			Contact();
+			~Contact();
 			void		printContact();
 			void		printLine();
 			void		setName(std::string name);

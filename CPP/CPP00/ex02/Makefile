@@ -5,21 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: miturk <miturk@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/09/23 20:28:05 by miturk            #+#    #+#              #
-#    Updated: 2024/10/03 14:47:50 by miturk           ###   ########.fr        #
+#    Created: 2024/10/03 14:47:15 by miturk            #+#    #+#              #
+#    Updated: 2024/10/03 14:47:38 by miturk           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = PhoneBook
+NAME = Account
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 AR = ar rcs
 RM = rm -f
 
-SRC = main.cpp \
-	PhoneBook.cpp \
-	Contact.cpp \
-	
+SRC = Account.cpp
 
 OBJ = ${SRC:.cpp=.o}
 

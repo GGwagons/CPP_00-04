@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 22:49:32 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/01 18:48:33 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/03 15:52:22 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ Contact::Contact() {
 	_num = "        ";
 	_darkestSecrets = "        ";
 }
+
+Contact::~Contact() {}
 
 void Contact::setName(std::string name) {
 	_name = name;

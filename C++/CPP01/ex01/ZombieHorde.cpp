@@ -6,18 +6,18 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 10:28:08 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/14 14:53:48 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/14 19:03:06 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie *Zombie::zombieHorde( int N, std::string name ) {
+Zombie *zombieHorde( int N, std::string name ) {
+	Zombie *horde = new Zombie[N];
 	for (int i = 0; i < N; i++) {
-		Zombie *zombie = new Zombie(name, i);
-		zombie->setName(name);
-		zombie->announce(i);
-		delete zombie;
+		horde[i].setName(name);
+		horde[i].setIndex(i);
+		horde[i].announce();
 	}
-	return (NULL);
+	return (horde);
 }

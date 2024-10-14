@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/05 16:08:17 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/14 13:15:24 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/14 18:38:12 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,10 @@ class Zombie {
 			~Zombie();
 			void announce(void);
 			void setName(std::string name);
-			Zombie *newZombie( std::string name );
-			void randomChump( std::string name );
+			
 };
+
+Zombie *newZombie( std::string name );
+void randomChump( std::string name );
 
 #endif

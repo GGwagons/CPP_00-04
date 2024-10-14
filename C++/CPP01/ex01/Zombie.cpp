@@ -6,26 +6,32 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 09:41:36 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/14 14:55:13 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/14 19:09:57 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name, int i) : _name(name) {
-	std::cout << this->_name << i << " is born" << std::endl;
+Zombie::Zombie(std::string name) : _name(name), _index() {
+	std::cout << _name << " is born" << std::endl;
+};
+
+Zombie::Zombie() : _name("Fred"), _index() {
+	std::cout << _name << " is born" << std::endl;
 };
 
 Zombie::~Zombie() {
-	static int i = 0;
-	std::cout << _name << " " << i << " " << this->_name << " is dead" << std::endl;
-	i++;
+	std::cout << _name << " " << _index << " is dead" << std::endl;
 };
 
 void Zombie::setName(std::string name) {
-	this->_name = name;
+	_name = name;
 }
 
-void Zombie::announce(int i) {
-	std::cout << this->_name << " " << i << " BraiiiiiiinnnzzzZ..." << std::endl;
+void Zombie::setIndex(int index) {
+	_index = index;
+}
+
+void Zombie::announce() {
+	std::cout << _name << " " << _index << " BraiiiiiiinnnzzzZ..." << std::endl;
 }

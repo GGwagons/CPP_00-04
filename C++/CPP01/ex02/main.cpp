@@ -5,16 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/06 10:27:05 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/14 19:15:11 by miturk           ###   ########.fr       */
+/*   Created: 2024/10/14 19:16:57 by miturk            #+#    #+#             */
+/*   Updated: 2024/10/14 19:37:45 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <string>
+#include <iostream>
+#include <iomanip>
+#include <sstream>
 
-int main() {
-	int N = 10;
-	Zombie *horde = zombieHorde(N, "Zombie Horde");	
-	delete[] horde; //This is how you delete arrays in C++
+int main () {
+	std::string str = "HI THIS IS BRAIN";
+	std::string *ptr = &str;
+	std::string &ref = str;
+
+	std::cout << "String address: " << &str << std::endl;
+	std::cout << "Pointer address: " << &ptr << std::endl;
+	std::cout << "Reference address: " << &ref << std::endl;
+
+	std::cout << "String value: " << str << std::endl;
+	std::cout << "Pointer value: " << *ptr << std::endl;
+	std::cout << "Reference value: " << ref << std::endl;
 	return (0);
 }

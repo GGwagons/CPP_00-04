@@ -6,11 +6,11 @@
 #    By: miturk <miturk@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/05 16:03:56 by miturk            #+#    #+#              #
-#    Updated: 2024/10/06 09:41:41 by miturk           ###   ########.fr        #
+#    Updated: 2024/10/14 13:20:10 by miturk           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Zombie
+NAME = zombieHorde
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f

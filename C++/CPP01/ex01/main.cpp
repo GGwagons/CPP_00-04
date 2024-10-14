@@ -6,15 +6,14 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 10:27:05 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/06 10:34:49 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/14 14:24:10 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
 int main() {
-	Zombie Zombie;
-	Zombie.zombieHorde(5, "Zombie");
-	Zombie.~Zombie();
+	Zombie *Zombie = NULL;
+	Zombie->zombieHorde(10, "Zombie");
 	return (0);
 }

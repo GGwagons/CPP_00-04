@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   File.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
+/*   By: wagons <wagons@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 12:36:42 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/15 18:53:05 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/15 19:27:22 by wagons           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,12 @@ void	File::setFileName(std::string fileName) {
 
 std::string File::getFileName() {
 	return _fileName;
-}	
+}
+
+// void	File::createFile(std::string fileName) {
+// 	std::ofstream newFile(fileName.c_str());
+// 	// newFile.close();
+// }
 
 void	File::readFile() {
 	std::string fileName = getFileName();
@@ -38,8 +43,11 @@ void	File::readFile() {
 		return ;
 	}
 	std::string line;
+	std::ofstream newFile(_fileName + ".replace");
 	while (std::getline(file, line)) {
-		std::cout << line << std::endl;
+		// createFile(_fileName + "replace.txt");
+		// std::cout << line << std::endl;
+		std::newFile << line << std::endl;
 	}
 	file.close();
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   File.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
+/*   By: wagons <wagons@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 12:03:01 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/15 18:43:57 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/15 19:16:24 by wagons           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
 class File {
 	private:
 		std::string _fileName;
-		std::string _content;
 	public:
 		File(std::string fileName);
 		File();
@@ -31,6 +30,8 @@ class File {
 		void	setFileName(std::string fileName);
 		std::string	getFileName();
 		void	readFile();
+		void	writeFile();
+		void	createFile(std::string fileName);
 };
 
 #endif

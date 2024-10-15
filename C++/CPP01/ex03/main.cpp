@@ -6,13 +6,33 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 19:41:08 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/14 20:01:33 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/15 13:53:28 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
-int main () {
-	std::cout << "hello" << std::endl;
-	return (0);
+int main() {
+	std::cout << std::endl;
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanA bob("Bob", club);
+		bob.attack();
+		club.setType("some other type of club");
+		bob.attack();
+	}
+	std::cout << std::endl;
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanB jim("Jim");
+		jim.attack();
+		jim.setWeapon(club);
+		jim.attack();
+		club.setType("some other type of club");
+		jim.attack();
+	}
+	std::cout << std::endl;
+	return 0;
 }

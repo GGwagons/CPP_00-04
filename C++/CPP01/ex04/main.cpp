@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 19:40:45 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/15 11:46:42 by miturk           ###   ########.fr       */
+/*   Created: 2024/10/15 12:00:02 by miturk            #+#    #+#             */
+/*   Updated: 2024/10/15 13:47:24 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-# define WEAPON_HPP
-
-#include <string>
 #include <iostream>
-#include <iomanip>
-#include <sstream>
+#include <string>
+#include "File.hpp"
 
-class Weapon {
-	private:
-		std::string _type;
-	public:
-		Weapon(std::string type);
-		Weapon();
-		~Weapon();
-		std::string const &getType();
-		void setType(std::string type);
-};
+class File;
 
-#endif
+int main(int argc, char **argv) {
+	(void)argv;
+	if (argc != 4) {
+		std::cout << "Wrong number of arguments" << std::endl;
+		return 1;
+	}
+	File File(argv[1]);
+	File.setFileName(argv[1]);
+	std:: cout << "File name: " << File.getFileName() << std::endl;
+	return 0;
+	
+}

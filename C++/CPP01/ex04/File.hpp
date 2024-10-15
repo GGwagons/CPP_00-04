@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   File.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 19:40:45 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/15 11:46:42 by miturk           ###   ########.fr       */
+/*   Created: 2024/10/15 12:03:01 by miturk            #+#    #+#             */
+/*   Updated: 2024/10/15 15:10:52 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-# define WEAPON_HPP
+#ifndef FILE_HPP
+# define FILE_HPP
 
-#include <string>
-#include <iostream>
-#include <iomanip>
-#include <sstream>
+# include <iostream>
+# include <string>
+# include <fstream>
+# include <sstream>
+# include <iomanip>
+# include <exception>
 
-class Weapon {
+class File {
 	private:
-		std::string _type;
+		std::string _fileName;
+		std::string _content;
 	public:
-		Weapon(std::string type);
-		Weapon();
-		~Weapon();
-		std::string const &getType();
-		void setType(std::string type);
+		File(std::string fileName);
+		~File();
 };
 
 #endif

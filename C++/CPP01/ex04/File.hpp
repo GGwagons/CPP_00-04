@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   File.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wagons <wagons@student.42.fr>              +#+  +:+       +#+        */
+/*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 12:03:01 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/15 19:16:24 by wagons           ###   ########.fr       */
+/*   Updated: 2024/10/16 14:25:51 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,26 @@
 # include <fstream>
 # include <sstream>
 # include <iomanip>
-# include <exception>
 
 class File {
 	private:
 		std::string _fileName;
+		std::string _toFind;
+		std::string _toReplace;
 	public:
-		File(std::string fileName);
+		File(std::string fileName, std::string toFind, std::string toReplace);
+		std::string	getFileName();
+		std::string	getToFind();
+		std::string	getToReplace();
 		File();
 		~File();
-		void	setFileName(std::string fileName);
-		std::string	getFileName();
-		void	readFile();
-		void	writeFile();
-		void	createFile(std::string fileName);
+		void		setFileName(std::string fileName);
+		void		setToFind(std::string toFind);
+		void		setToReplace(std::string toReplace);
+		void 		theSwitch(std::string &str, std::string _toFind, std::string _toReplace);
+		void		readFile();
+		void 		createFile(std::string str);
+		void		writerFile(std::ifstream &file, std::string newFileName);
 };
 
 #endif

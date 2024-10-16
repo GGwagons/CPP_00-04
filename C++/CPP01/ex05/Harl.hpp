@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 18:11:03 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/16 18:31:16 by miturk           ###   ########.fr       */
+/*   Created: 2024/10/16 14:28:32 by miturk            #+#    #+#             */
+/*   Updated: 2024/10/16 18:31:49 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#ifndef HARL_HPP
+# define HARL_HPP
 
-int main(int argc, char **argv) {
-	if (argc != 2) {
-		std::cout << "Usage: ./harl [DEBUG/INFO/WARNING/ERROR]" << std::endl;
-		return 1;
-	}
-	Harl harl;
-	harl.complain(argv[1]);
-	return 0;
-}
+#include <iostream>
+#include <string>
+#include <iomanip>
+
+class Harl {
+	private:
+		void debug(void);
+		void info(void);
+		void warning(void);
+		void error(void);
+		int getLevel(std::string level);
+	public:
+		Harl();
+		~Harl();
+		void complain(std::string level);
+};
+
+#endif

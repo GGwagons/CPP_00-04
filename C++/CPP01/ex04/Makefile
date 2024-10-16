@@ -6,11 +6,11 @@
 #    By: miturk <miturk@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/15 11:59:53 by miturk            #+#    #+#              #
-#    Updated: 2024/10/15 12:40:44 by miturk           ###   ########.fr        #
+#    Updated: 2024/10/16 14:27:08 by miturk           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Seed
+NAME = Sed
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f

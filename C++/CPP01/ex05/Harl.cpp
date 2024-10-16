@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 14:28:24 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/16 18:49:18 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/16 20:23:55 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,10 @@ void Harl::complain(std::string level) {
 	for (int i = 1; i < 5; i++) {
 		if (levels[i] == level) {
 			(this->*complaints[i])();
+			return ;
+		}
+		else if (i == 4) {
+			std::cout << "Usage: ./harl [DEBUG/INFO/WARNING/ERROR]" << std::endl;
 			return ;
 		}
 	}

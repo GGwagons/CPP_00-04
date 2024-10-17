@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 18:11:03 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/17 10:46:21 by miturk           ###   ########.fr       */
+/*   Created: 2024/10/17 13:22:45 by miturk            #+#    #+#             */
+/*   Updated: 2024/10/17 14:16:33 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#ifndef FIXED_HPP
+# define FIXED_HPP
 
-int main(int argc, char **argv) {
-	Harl harl;
-	if (argc == 2 || argc == 1) {
-		if (argc == 2) {
-			harl.complain(argv[1]);
-		}
-		else {
-			harl.complain("DEBUG");
-			harl.complain("ERROR");
-			harl.complain("WARNING");
-			harl.complain("INFO");
-			harl.complain("");
-		}
-		return 0;
-	}
-	std::cout << "Usage: ./harl [DEBUG/INFO/WARNING/ERROR]" << std::endl;
-	return 1;
-	
-}
+#include <iostream>
+#include <cmath>
+#include <string>
+#include <iomanip>
+#include <sstream>
+
+class Fixed {
+	private:
+		int _value;
+		static const int _fractionalBits = 8;
+	public:
+		Fixed();
+		Fixed(Fixed const &copy);
+		Fixed  &operator=(const Fixed &copy);
+		~Fixed();
+		int getRawBits(void) const;
+		void setRawBits(int const raw);
+};
+
+#endif

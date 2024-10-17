@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 18:11:03 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/17 10:46:21 by miturk           ###   ########.fr       */
+/*   Created: 2024/10/16 21:18:55 by miturk            #+#    #+#             */
+/*   Updated: 2024/10/17 10:57:32 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#ifndef HARL_HPP
+# define HARL_HPP
 
-int main(int argc, char **argv) {
-	Harl harl;
-	if (argc == 2 || argc == 1) {
-		if (argc == 2) {
-			harl.complain(argv[1]);
-		}
-		else {
-			harl.complain("DEBUG");
-			harl.complain("ERROR");
-			harl.complain("WARNING");
-			harl.complain("INFO");
-			harl.complain("");
-		}
-		return 0;
-	}
-	std::cout << "Usage: ./harl [DEBUG/INFO/WARNING/ERROR]" << std::endl;
-	return 1;
-	
-}
+#include <iostream>
+#include <string>
+#include <iomanip>
+#include <sstream>
+
+class Harl {
+	private:
+		void debug(void);
+		void info(void);
+		void warning(void);
+		void error(void);
+	public:
+		Harl();
+		~Harl();
+		int getLevel(std::string level);
+		void complain(std::string level);
+};
+
+
+#endif

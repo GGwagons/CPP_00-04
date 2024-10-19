@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 09:41:36 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/14 19:09:57 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/17 18:51:41 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ void Zombie::setIndex(int index) {
 	_index = index;
 }
 
-void Zombie::announce() {
+void Zombie::announce(void) {
 	std::cout << _name << " " << _index << " BraiiiiiiinnnzzzZ..." << std::endl;
 }

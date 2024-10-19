@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 19:40:51 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/15 11:41:56 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/17 18:41:00 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class HumanB {
 		HumanB(std::string name);
 		~HumanB();
 		void setWeapon(Weapon &weapon);
-		void attack();
+		void attack() const;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 19:40:11 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/15 11:42:49 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/17 18:36:28 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ class HumanA {
 	public:
 		HumanA(std::string name, Weapon &weapon);
 		~HumanA();
-		void setWeapon(Weapon &weapon);
-		void attack();
+		void attack() const;
 };
 
 #endif

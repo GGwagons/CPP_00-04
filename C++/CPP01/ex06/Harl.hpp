@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 21:18:55 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/17 10:57:32 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/17 17:56:56 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <string>
 #include <iomanip>
 #include <sstream>
+
 
 class Harl {
 	private:
@@ -30,6 +31,5 @@ class Harl {
 		int getLevel(std::string level);
 		void complain(std::string level);
 };
-
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 18:11:03 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/17 10:46:21 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/18 13:18:50 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ int main(int argc, char **argv) {
 		return 0;
 	}
 	std::cout << "Usage: ./harl [DEBUG/INFO/WARNING/ERROR]" << std::endl;
-	return 1;
+	return (1);
 	
 }

@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 21:18:31 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/17 11:29:50 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/18 13:10:57 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,7 @@ void Harl::complain(std::string level) {
 	std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	complaints comp[] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 	int lvl = getLevel(level);
-	switch (lvl)
-	{
+	switch (lvl) {
 	case 0:
 		for (int i = lvl; i < 4; i++) {
 			(this->*comp[i])();

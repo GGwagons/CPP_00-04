@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 09:41:59 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/14 19:09:31 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/17 18:51:10 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Zombie {
 			Zombie(std::string name);
 			Zombie();
 			~Zombie();
-			void announce();
+			void announce(void);
 			void setName(std::string name);
 			void setIndex(int index);
 };

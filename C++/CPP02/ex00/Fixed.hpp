@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 13:22:45 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/17 14:16:33 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/18 17:12:58 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ class Fixed {
 		static const int _fractionalBits = 8;
 	public:
 		Fixed();
-		Fixed(Fixed const &copy);
-		Fixed  &operator=(const Fixed &copy);
+		Fixed(const Fixed &fixed);
+		Fixed  &operator=(const Fixed &fixed);
 		~Fixed();
 		int getRawBits(void) const;
 		void setRawBits(int const raw);

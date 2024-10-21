@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: wagons <wagons@student.42.fr>              +#+  +:+       +#+         #
+#    By: miturk <miturk@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/19 23:50:29 by wagons            #+#    #+#              #
-#    Updated: 2024/10/19 23:51:38 by wagons           ###   ########.fr        #
+#    Updated: 2024/10/21 11:39:21 by miturk           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
 
-SRC = main.cpp \
+SRC = 	main.cpp \
 		Fixed.cpp
 
 OBJ = ${SRC:.cpp=.o}

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wagons <wagons@student.42.fr>              +#+  +:+       +#+        */
+/*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 13:22:45 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/20 00:17:48 by wagons           ###   ########.fr       */
+/*   Updated: 2024/10/21 12:58:15 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,45 +31,35 @@ class Fixed {
 		Fixed(const float num);
 		Fixed(const Fixed &fixed);
 		~Fixed();
-
 		// Member functions
 		int		getRawBits(void) const;
 		int		toInt(void) const;
 		void	setRawBits(int const raw);
 		float	toFloat(void) const;
-		
+		//Operators
+		Fixed	&operator=(const Fixed &fixed);
+		Fixed	operator+(const Fixed &fixed) const;
+		Fixed	operator-(const Fixed &fixed) const;
+		Fixed	operator*(const Fixed &fixed) const;
+		Fixed	operator/(const Fixed &fixed) const;
+		//Increments
+		Fixed	operator++(int);
+		Fixed	operator--(int);
+		Fixed	&operator++(void);
+		Fixed	&operator--(void);
+		//Comparison
+		bool	operator>(const Fixed &fixed) const;
+		bool	operator<(const Fixed &fixed) const;
+		bool	operator>=(const Fixed &fixed) const;
+		bool	operator<=(const Fixed &fixed) const;
+		bool	operator==(const Fixed &fixed) const;
+		bool	operator!=(const Fixed &fixed) const;
+		// MAX / MIN
+		static Fixed &min(Fixed &a, Fixed &b);
+		static const Fixed &min(const Fixed &a, const Fixed &b);
+		static Fixed &max(Fixed &a, Fixed &b);
+		static const Fixed &max(const Fixed &a, const Fixed &b);
 };
 std::ostream &operator<<(std::ostream &out, const Fixed &fixed);
 
-
 #endif
-
-
-
-
-// Assignment operators
-		// Fixed	&operator=(const Fixed &fixed);
-		// Fixed	operator+(const Fixed &fixed) const;
-		// Fixed	operator-(const Fixed &fixed) const;
-		// Fixed	operator*(const Fixed &fixed) const;
-		// Fixed	operator/(const Fixed &fixed) const;
-		// 
-		// Increment and decrement operators
-		// Fixed	&operator++(void);
-		// Fixed	operator++(int);
-		// Fixed	&operator--(void);
-		// Fixed	operator--(int);
-		// 
-		// Comparison operators
-		// bool	operator>(const Fixed &fixed) const;
-		// bool	operator<(const Fixed &fixed) const;
-		// bool	operator>=(const Fixed &fixed) const;
-		// bool	operator<=(const Fixed &fixed) const;
-		// bool	operator==(const Fixed &fixed) const;
-		// bool	operator!=(const Fixed &fixed) const;
-		// 
-		// Min and Max functions
-		// static Fixed	&min(Fixed &a, Fixed &b);
-		// static Fixed	&max(Fixed &a, Fixed &b);
-		// static const Fixed	&min(const Fixed &a, const Fixed &b);
-		// static const Fixed	&max(const Fixed &a, const Fixed &b);

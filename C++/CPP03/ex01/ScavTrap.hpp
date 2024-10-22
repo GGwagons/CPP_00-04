@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 17:32:51 by wagons            #+#    #+#             */
-/*   Updated: 2024/10/22 11:32:52 by miturk           ###   ########.fr       */
+/*   Created: 2024/10/22 11:54:00 by miturk            #+#    #+#             */
+/*   Updated: 2024/10/22 13:59:22 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-#include <iostream>
 #include <string>
-#include <iomanip>
 #include <sstream>
+#include <iomanip>
+#include <iostream>
+#include "ClapTrap.hpp"
 
-class ClapTrap {
+class ScavTrap : private ClapTrap {
 	private:
-		std::string _name;
-		unsigned int _hitpoints;
-		unsigned int _energyPoints;
-		unsigned int _attackDamage;
 	public:
-		ClapTrap();
-		ClapTrap(const std::string &name);
-		ClapTrap(const ClapTrap &copy);
-		ClapTrap &operator=(const ClapTrap &copy);
-		~ClapTrap();
+		ScavTrap();
+		ScavTrap(const std::string &name);
+		ScavTrap(const ScavTrap &copy);
+		ScavTrap &operator=(const ScavTrap &copy);
+		~ScavTrap();
 		void setName(std::string name);
 		void setHitpoints(unsigned int hitpoints);
 		void setEnergyPoints(unsigned int energyPoints);
@@ -37,6 +34,8 @@ class ClapTrap {
 		void attack(const std::string &target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
+		void guardGate();
+
 };
 
 #endif

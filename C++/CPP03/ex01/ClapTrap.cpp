@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 17:32:37 by wagons            #+#    #+#             */
-/*   Updated: 2024/10/22 11:36:38 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/23 10:55:01 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,28 @@ void ClapTrap::setName(std::string name) {
 	_name = name;
 }
 
+std::string ClapTrap::getName() const {
+	return _name;
+}
+
+unsigned int ClapTrap::getHitpoints() const {
+	return _hitpoints;
+}
+
+unsigned int ClapTrap::getEnergyPoints() const {
+	return _energyPoints;
+}
+
+unsigned int ClapTrap::getAttackDamage() const {
+	return _attackDamage;
+}
+
 void ClapTrap::setHitpoints(unsigned int hitpoints) {
 	_hitpoints = hitpoints;
+}
+
+void ClapTrap::setAttackDamage(unsigned int attackDamage) {
+	_attackDamage = attackDamage;
 }
 
 void ClapTrap::setEnergyPoints(unsigned int energyPoints) {

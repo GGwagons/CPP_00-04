@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 11:54:00 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/22 13:59:22 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/23 10:41:52 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 #include "ClapTrap.hpp"
 
 class ScavTrap : private ClapTrap {
-	private:
 	public:
 		ScavTrap();
 		ScavTrap(const std::string &name);

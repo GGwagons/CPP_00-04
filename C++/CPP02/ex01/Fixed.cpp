@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 13:22:07 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/21 12:15:53 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/23 11:18:42 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void Fixed::setRawBits(int const raw) {
 };
 
 float Fixed::toFloat(void) const {
-	float f = static_cast<float>(_value) / (1 << _fractionalBits);
+	float f = (float)(_value) / (1 << _fractionalBits);
 	return f;
 };
 

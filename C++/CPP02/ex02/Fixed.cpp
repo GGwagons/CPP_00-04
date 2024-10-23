@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 13:22:07 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/21 12:15:28 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/23 14:24:36 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,55 +76,65 @@ Fixed Fixed::operator*(const Fixed &fixed) const {
 	return res;
 }
 
+Fixed Fixed::operator/(const Fixed &fixed) const {
+	Fixed res;
+	res.setRawBits((this->_value << _fractionalBits) / fixed.getRawBits());
+	return res;
+}
+
+//Post increment
 Fixed Fixed::operator++(int) {
     Fixed temp = *this;
     this->_value++;
     return temp;
 }
 
+//Post decrement
 Fixed Fixed::operator--(int) {
     Fixed temp = *this;
     this->_value--;
     return temp;
 }
 
+//Pre increment
 Fixed &Fixed::operator++(void) {
 	this->_value++;
 	return *this;
 }
 
+// Pre decrement
 Fixed &Fixed::operator--(void) {
 	this->_value--;
 	return *this;
 }
 
 bool Fixed::operator>(const Fixed &fixed) const {
-	bool res = (this->_value > fixed.getRawBits()) ? true : false; //Trying to learn ternary operators
+	bool res = (this->_value > fixed.getRawBits()) ? true : false;
 	return res;
 }
 
 bool Fixed::operator<(const Fixed &fixed) const {
-	bool res = (this->_value < fixed.getRawBits()) ? true : false; //Trying to learn ternary operators
+	bool res = (this->_value < fixed.getRawBits()) ? true : false;
 	return res;
 }
 
 bool Fixed::operator>=(const Fixed &fixed) const {
-	bool res = (this->_value >= fixed.getRawBits()) ? true : false; //Trying to learn ternary operators
+	bool res = (this->_value >= fixed.getRawBits()) ? true : false;
 	return res;
 }
 
 bool Fixed::operator<=(const Fixed &fixed) const {
-	bool res = (this->_value <= fixed.getRawBits()) ? true : false; //Trying to learn ternary operators
+	bool res = (this->_value <= fixed.getRawBits()) ? true : false;
 	return res;
 }
 
 bool Fixed::operator==(const Fixed &fixed) const {
-	bool res = (this->_value == fixed.getRawBits()) ? true : false; //Trying to learn ternary operators
+	bool res = (this->_value == fixed.getRawBits()) ? true : false;
 	return res;
 }
 
 bool Fixed::operator!=(const Fixed &fixed) const {
-	bool res = (this->_value != fixed.getRawBits()) ? true : false; //Trying to learn ternary operators
+	bool res = (this->_value != fixed.getRawBits()) ? true : false;
 	return res;
 }
 

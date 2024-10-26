@@ -6,11 +6,11 @@
 #    By: miturk <miturk@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/22 11:50:12 by miturk            #+#    #+#              #
-#    Updated: 2024/10/22 11:50:34 by miturk           ###   ########.fr        #
+#    Updated: 2024/10/24 17:35:00 by miturk           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ClapTrap
+NAME = ScavTrap
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f

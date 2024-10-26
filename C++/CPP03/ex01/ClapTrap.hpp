@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 17:32:51 by wagons            #+#    #+#             */
-/*   Updated: 2024/10/23 10:42:40 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/26 12:47:49 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class ClapTrap {
 		ClapTrap &operator=(const ClapTrap &copy);
 		~ClapTrap();
 		std::string getName() const;
-		unsigned int getHitpoints() const;
+		unsigned int getHitPoints() const;
 		unsigned int getEnergyPoints() const;
 		unsigned int getAttackDamage() const;
 		void setName(std::string name);

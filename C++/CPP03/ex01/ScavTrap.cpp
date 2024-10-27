@@ -6,42 +6,46 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 11:53:49 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/26 14:49:36 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/27 14:00:48 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap() : ClapTrap("ScavTrap") {
-	std::cout << getName() << " default constructor" << std::endl;
-	setHitpoints(100);
-	setEnergyPoints(50);
-	setAttackDamage(20);
+	std::cout << _name << " default constructor" << std::endl;
+	_hitPoints = 100;
+	_energyPoints = 50;
+	_attackDamage = 20;
 }
 
 ScavTrap::ScavTrap(const std::string name) : ClapTrap(name) {
-	std::cout << getName() << " Name constructor called" << std::endl;
-	setHitpoints(100);
-	setEnergyPoints(50);
-	setAttackDamage(20);
+	std::cout << _name << " Name constructor called" << std::endl;
+	_hitPoints = 100;
+	_energyPoints = 50;
+	_attackDamage = 20;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &copy) {
-	std::cout << getName() << " copy constructor called" << std::endl;
+	std::cout << _name << " copy constructor called" << std::endl;
 	*this = copy;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &copy) {
-	std::cout << getName() << "assignation operator called" << std::endl;
-	setName(copy.getName());
-	setHitpoints(copy.getHitPoints());
-	setEnergyPoints(copy.getEnergyPoints());
+	std::cout << _name << "assignation operator called" << std::endl;
+	if (this == &copy)
+		return *this;
+	_name = copy._name;
+	_hitPoints = copy._hitPoints;
+	_energyPoints = copy._energyPoints;
+	_attackDamage = copy._attackDamage;
 	return *this;
 }
+
 ScavTrap::~ScavTrap() {
-	std::cout << getName() << " destructor" << std::endl;
+	std::cout << _name << " destructor" << std::endl;
 }
 
 void ScavTrap::guardGate() {
-	std::cout << "ScavTrap " << getName() << "  is now in Gate keeper mode" << std::endl;
+	std::cout << _name << " is now in Gate keeper mode" << std::endl;
 }

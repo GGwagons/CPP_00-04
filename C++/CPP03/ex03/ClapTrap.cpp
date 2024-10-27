@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 17:32:37 by wagons            #+#    #+#             */
-/*   Updated: 2024/10/27 13:59:06 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/27 13:41:49 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ ClapTrap::ClapTrap(const ClapTrap &copy) {
 void ClapTrap::attack(const std::string &target) {
 	if (_energyPoints != 0) {
 		_energyPoints -= 1;
-		std::cout << _name << " attacks " << target << ", causing " << _attackDamage << " points of damage!" << std::endl;
+		std::cout << _name << " attacks " << Target << ", causing " << _attackDamage << " points of damage!" << std::endl;
 		std::cout << _name << " has " << _energyPoints << " energy points!" << std::endl;
 	}
 	else {
@@ -55,7 +55,9 @@ void ClapTrap::takeDamage(unsigned int amount) {
 	std::cout << _name << " takes " << amount << " points of damage!" << std::endl;
 	(amount >= _hitPoints) ? _hitPoints = 0 : _hitPoints -= amount;
 	std::cout << _name << " has " << _hitPoints << " hitpoints!" << std::endl;
-	(_hitPoints == 0) ? std::cout << _name << " is dead!" << std::endl : std::cout << _name << " is still alive!" << std::endl;
+	if (_hitPoints == 0) {
+		std::cout << _name << " is dead!" << std::endl;
+	}
 }
 
 void ClapTrap::beRepaired(unsigned int amount) {

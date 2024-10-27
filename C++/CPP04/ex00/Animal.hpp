@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 17:32:51 by wagons            #+#    #+#             */
-/*   Updated: 2024/10/27 13:41:49 by miturk           ###   ########.fr       */
+/*   Created: 2024/10/27 14:32:38 by miturk            #+#    #+#             */
+/*   Updated: 2024/10/27 14:55:40 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
 #include <iostream>
 
-class ClapTrap {
+class Animal {
 	protected:
-		std::string _name;
-		unsigned int _hitPoints;
-		unsigned int _energyPoints;
-		unsigned int _attackDamage;
+		std::string type;
 	public:
-		ClapTrap();
-		ClapTrap(const std::string &name);
-		ClapTrap(const ClapTrap &copy);
-		ClapTrap &operator=(const ClapTrap &copy);
-		virtual ~ClapTrap();
-		void attack(const std::string &target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
+		Animal();
+		Animal(const std::string &type);
+		Animal(const Animal &copy);
+		Animal &operator=(const Animal &copy);
+		std::string getType() const;
+		std::string setType(const std::string &type);
+		virtual ~Animal();
 };
 
 #endif

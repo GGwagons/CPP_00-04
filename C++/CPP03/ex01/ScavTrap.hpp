@@ -6,16 +6,13 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 11:54:00 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/26 14:49:30 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/27 11:18:14 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_HPP
 # define SCAVTRAP_HPP
 
-#include <string>
-#include <sstream>
-#include <iomanip>
 #include <iostream>
 #include "ClapTrap.hpp"
 

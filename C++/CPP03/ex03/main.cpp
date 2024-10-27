@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 11:54:00 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/27 13:07:34 by miturk           ###   ########.fr       */
+/*   Created: 2024/10/21 12:57:33 by miturk            #+#    #+#             */
+/*   Updated: 2024/10/27 13:17:07 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#include "DiamondTrap.hpp"
 
-#include <iostream>
-#include "ClapTrap.hpp"
-
-class ScavTrap : public ClapTrap {
-	protected:
-		ScavTrap();
-		ScavTrap(const std::string name);
-		ScavTrap(const ScavTrap &copy);
-		ScavTrap &operator=(const ScavTrap &copy);
-		virtual ~ScavTrap();
-		void guardGate();
-		
-};
-
-#endif
+int main() {
+	DiamondTrap diamond("DiamondTrap");
+	diamond.attack("Enemy");
+	diamond.takeDamage(10);
+	diamond.beRepaired(10);
+	diamond.whoAmI();
+	
+	return 0;
+}

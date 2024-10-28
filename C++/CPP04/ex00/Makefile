@@ -6,7 +6,7 @@
 #    By: miturk <miturk@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/27 14:30:28 by miturk            #+#    #+#              #
-#    Updated: 2024/10/27 14:31:30 by miturk           ###   ########.fr        #
+#    Updated: 2024/10/28 18:38:48 by miturk           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,10 @@ CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
 
-SRC = 	main.cpp 
+SRC = 	main.cpp \
+		Animal.cpp \
+		Dog.cpp \
+		Cat.cpp \
 
 OBJ = ${SRC:.cpp=.o}
 

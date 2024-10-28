@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 11:54:00 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/27 11:18:14 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/28 10:18:55 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class ScavTrap : public ClapTrap {
 		ScavTrap(const ScavTrap &copy);
 		ScavTrap &operator=(const ScavTrap &copy);
 		~ScavTrap();
+		void attack(const std::string &target);
 		void guardGate();
 		
 };

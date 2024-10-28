@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 12:57:33 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/27 13:42:33 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/28 11:48:47 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void testClapTrap(ClapTrap *claptrap, const std::string &target) {
     claptrap->attack(target);
-    claptrap->takeDamage(10);
+    claptrap->takeDamage(0);
     claptrap->beRepaired(5);
     std::cout << std::endl;
     delete claptrap;
@@ -22,13 +22,13 @@ void testClapTrap(ClapTrap *claptrap, const std::string &target) {
 
 int main() {
 
-	ClapTrap claptrap("ClapTrap");
-	claptrap.attack("Target");
+	ClapTrap claptrap("THE CLAPTOR");
+	claptrap.attack("POOR SUCKER");
 	claptrap.takeDamage(10);
 	claptrap.beRepaired(5);
 	std::cout << std::endl;
 	std::cout << std::endl;
-    ClapTrap *clap = new ClapTrap("ClapTrap");
-    testClapTrap(clap, "Target");
+    ClapTrap *clap = new ClapTrap("THE CLAP");
+    testClapTrap(clap, "CIVILIAN");
     return 0;
 }

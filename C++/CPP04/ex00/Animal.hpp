@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 14:32:38 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/27 14:55:40 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/28 18:46:58 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,15 @@
 
 class Animal {
 	protected:
-		std::string type;
+		std::string _type;
 	public:
 		Animal();
 		Animal(const std::string &type);
 		Animal(const Animal &copy);
 		Animal &operator=(const Animal &copy);
 		std::string getType() const;
-		std::string setType(const std::string &type);
+		void setType(const std::string &type);
+		virtual void makeSound() const = 0;
 		virtual ~Animal();
 };
 

@@ -6,13 +6,14 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 17:32:51 by wagons            #+#    #+#             */
-/*   Updated: 2024/10/27 13:41:49 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/28 12:27:55 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CLAPTRAP_HPP
 # define CLAPTRAP_HPP
 
+#define MAX 4294967295
 #include <iostream>
 
 class ClapTrap {

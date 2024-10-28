@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 14:35:32 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/27 14:36:38 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/28 18:35:52 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ class Dog : public Animal {
 		Dog(const Dog &copy);
 		Dog &operator=(const Dog &copy);
 		virtual ~Dog();
-		void makeSound() const;
 };
 
 #endif

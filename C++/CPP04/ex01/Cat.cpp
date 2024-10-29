@@ -6,14 +6,15 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 14:36:53 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/29 12:24:47 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/29 15:40:12 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat() : Animal("Cat") {
+Cat::Cat() : _brain(new Brain), Animal("Cat") {
 	std::cout << "Cat constructor called" << std::endl;
+	_type = "Cat";
 }
 
 Cat::Cat(const std::string &type) : Animal(type) {
@@ -34,6 +35,7 @@ Cat &Cat::operator=(const Cat &copy) {
 
 Cat::~Cat() {
 	std::cout << "Cat destructor called" << std::endl;
+	delete _brain;
 }
 
 void Cat::makeSound() const {

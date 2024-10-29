@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/27 14:36:47 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/29 12:21:45 by miturk           ###   ########.fr       */
+/*   Created: 2024/10/27 14:35:32 by miturk            #+#    #+#             */
+/*   Updated: 2024/10/29 15:26:14 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef DOG_HPP
+# define DOG_HPP
 
 #include "Animal.hpp"
+class Brain;
 
-class Cat : public Animal {
+class Dog : public Animal {
+	private:
+		Brain *_brain;
 	public:
-		Cat();
-		Cat(const std::string &type);
-		Cat(const Cat &copy);
-		Cat &operator=(const Cat &copy);
-		void makeSound() const;
-		virtual ~Cat();
+		Dog();
+		Dog(const std::string &type);
+		Dog(const Dog &copy);
+		Dog &operator=(const Dog &copy);
+		void setBrain(const Brain &brain);
+		Brain getBrain() const;
+		virtual void makeSound() const;
+		virtual ~Dog();
 };
 
 #endif

@@ -6,18 +6,19 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 14:36:47 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/30 10:02:40 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/30 13:36:36 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CAT_HPP
 # define CAT_HPP
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Brain.hpp"
+#include <iostream>
+#include <string>
 
-
-class Cat : public Animal {
+class Cat : public AAnimal {
 	private:
 		Brain *_brain;
 	public:

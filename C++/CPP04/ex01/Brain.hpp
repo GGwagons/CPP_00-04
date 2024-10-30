@@ -6,12 +6,14 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 15:05:56 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/29 15:34:32 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/30 09:58:24 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifdefine BRAIN_HPP
+#ifndef BRAIN_HPP
 # define BRAIN_HPP
+
+#include <iostream>
 
 class Brain {
 	private:
@@ -21,6 +23,6 @@ class Brain {
 		Brain(const Brain &copy);
 		Brain &operator=(const Brain &copy);
 		~Brain();
-}
+};
 
 #endif

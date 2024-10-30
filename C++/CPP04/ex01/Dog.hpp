@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 14:35:32 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/29 15:26:14 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/30 14:08:26 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define DOG_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 class Brain;
 
 class Dog : public Animal {

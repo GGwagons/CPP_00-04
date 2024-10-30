@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 14:35:21 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/29 12:24:36 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/30 12:55:39 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Dog::Dog(const std::string &type) : Animal(type) {
 	std::cout << "Dog type constructor called" << std::endl;
 }
 
-Dog::Dog(const Dog &copy) : Animal("Dog") {
+Dog::Dog(const Dog &copy) : Animal(copy) {
 	std::cout << "Dog copy constructor called" << std::endl;
 	*this = copy;
 }

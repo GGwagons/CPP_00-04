@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 14:35:21 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/30 12:55:18 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/30 14:07:47 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,18 @@ Dog::Dog() : _brain(new Brain()) {
 	_type = "Dog";
 }
 
-Dog::Dog(const std::string &type) : Animal(type) {
+Dog::Dog(const std::string &type) : AAnimal(type) {
 	std::cout << "Dog type constructor called" << std::endl;
 }
 
-Dog::Dog(const Dog &copy) : Animal(copy), _brain(new Brain()) {
+Dog::Dog(const Dog &copy) : AAnimal(copy), _brain(new Brain(*copy._brain)) {
 	std::cout << "Dog copy constructor called" << std::endl;
-	*this = copy;
 }
 
 Dog &Dog::operator=(const Dog &copy) {
 	std::cout << "Dog assignation operator called" << std::endl;
 	if (this != &copy) {
-		Animal::operator=(copy);
+		AAnimal::operator=(copy);
 		*_brain = *copy._brain;
 	}
 	return *this;
@@ -40,9 +39,13 @@ Dog::~Dog() {
 	delete _brain;
 }
 
+Brain &Dog::getBrain() const {
+	return *_brain;
+}
+
 void Dog::makeSound() const {
-	if (this->_type == "Dog")
-		std::cout << "Woof Woof" << std::endl;
+	if (_type == "Dog")
+		std::cout << "Woof Woof!" << std::endl;
 	else
 		std::cout << "Dog sound" << std::endl;
 }

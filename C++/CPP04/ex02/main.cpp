@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 14:31:42 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/30 15:51:26 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/30 15:57:54 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,26 +32,27 @@ int main() {
 	Dog dog;
 	Cat cat;
     AAnimal* Aanimals[100];
-	for (int i = 0; i < 100; ++i) {
-		if (i % 2 == 0) {
-			Aanimals[i] = new Dog();
-			Aanimals[i]->makeSound();
-			dog.getBrain().setIdea(i, "I am a dog, bork bork");
-			std::cout << dog.getBrain().getIdea(i) << std::endl;
+	int index = 0;
+	for (; index < 100; ++index) {
+		if (index % 2 == 0) {
+			Aanimals[index] = new Dog();
+			Aanimals[index]->makeSound();
+			dog.getBrain().setIdea(index, "I am a dog, bork bork");
+			std::cout << dog.getBrain().getIdea(index) << std::endl;
 			std::cout << std::endl;
 		}
 		else {
-			Aanimals[i] = new Cat();
-			Aanimals[i]->makeSound();
-			cat.getBrain().setIdea(i, "I am a cat, meow meow");
-			std::cout << cat.getBrain().getIdea(i) << std::endl;
+			Aanimals[index] = new Cat();
+			Aanimals[index]->makeSound();
+			cat.getBrain().setIdea(index, "I am a cat, meow meow");
+			std::cout << cat.getBrain().getIdea(index) << std::endl;
 			std::cout << std::endl;
 		}
 	}
 	std::cout << std::endl;
 	std::cout << "<----------DELETE-AAnimals---------->" << std::endl;
 	std::cout << std::endl;
-	for (int k = 0; k < 100; ++k) {
+	for (int k = 0; k < index; ++k) {
 		delete Aanimals[k];
 	}
     std::cout << std::endl;
@@ -60,8 +61,11 @@ int main() {
 	std::cout << std::endl;
     // Test deep copy behavior
     Dog originalDog;
+	std::cout << std::endl;
     Dog copyDog = originalDog;
+	std::cout << std::endl;
     Cat originalCat;
+	std::cout << std::endl;
     Cat copyCat = originalCat;
 
     return 0;

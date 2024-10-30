@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 14:31:42 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/30 15:57:54 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/30 20:15:26 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,6 @@ int main() {
     Cat originalCat;
 	std::cout << std::endl;
     Cat copyCat = originalCat;
-
-    return 0;
+	std::cout << "<----------DEEP-COPY-TEST---------->" << std::endl;
+	return 0;
 }

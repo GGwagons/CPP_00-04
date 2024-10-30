@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 15:05:56 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/30 09:58:24 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/30 18:22:04 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ class Brain {
 		Brain();
 		Brain(const Brain &copy);
 		Brain &operator=(const Brain &copy);
+		std::string getIdea(int index) const;
+		void setIdea(int index, const std::string &idea);
 		~Brain();
 };
 

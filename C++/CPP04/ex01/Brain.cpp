@@ -6,13 +6,13 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 15:05:58 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/30 11:02:02 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/30 18:53:59 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Brain.hpp"
 
-Brain::Brain() : _ideas() {
+Brain::Brain() {
 	std::cout << "Brain constructor called" << std::endl;
 }
 
@@ -30,6 +30,14 @@ Brain &Brain::operator=(const Brain &copy) {
 			_ideas[i] = copy._ideas[i];
 	}
 	return *this;
+}
+
+std::string Brain::getIdea(int index) const {
+	return _ideas[index];
+}
+
+void Brain::setIdea(int index, const std::string &idea) {
+	_ideas[index] = idea;
 }
 
 Brain::~Brain() {

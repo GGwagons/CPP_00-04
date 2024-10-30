@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 14:31:42 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/30 14:29:24 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/30 15:51:26 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,31 +29,35 @@ int main() {
     delete i; // Should call Cat destructor and Brain destructor
 	std::cout << "<----------------------------------->" << std::endl;
     // Testing array of Aanimals with mixed types
-    AAnimal* Aanimals[4];
-    Aanimals[0] = new Dog();
-    Aanimals[1] = new Cat();
-    Aanimals[2] = new Dog();
-    Aanimals[3] = new Cat();
-	Dog duck;
-	{
-		Dog duck2;
-		std::cout << "<----------------------------------->" << std::endl;
-    	for (int k = 0; k < 4; ++k) {
-    	    Aanimals[k]->makeSound();
-    	}
-		duck2.getBrain().setIdea(0, "I am a dog, bork bork");
-		std::cout << "duck2 thinks the following" << std::endl;
-		std::cout << duck2.getBrain().getIdea(0) << std::endl;
-		duck = duck2;
+	Dog dog;
+	Cat cat;
+    AAnimal* Aanimals[100];
+	for (int i = 0; i < 100; ++i) {
+		if (i % 2 == 0) {
+			Aanimals[i] = new Dog();
+			Aanimals[i]->makeSound();
+			dog.getBrain().setIdea(i, "I am a dog, bork bork");
+			std::cout << dog.getBrain().getIdea(i) << std::endl;
+			std::cout << std::endl;
+		}
+		else {
+			Aanimals[i] = new Cat();
+			Aanimals[i]->makeSound();
+			cat.getBrain().setIdea(i, "I am a cat, meow meow");
+			std::cout << cat.getBrain().getIdea(i) << std::endl;
+			std::cout << std::endl;
+		}
 	}
-	std::cout << "duck thinks the following" << std::endl;
-	std::cout << duck.getBrain().getIdea(0) << std::endl;
+	std::cout << std::endl;
 	std::cout << "<----------DELETE-AAnimals---------->" << std::endl;
-    for (int k = 0; k < 4; ++k) {
-		std::cout << "Deleting Aanimal " << k << std::endl;
-        delete Aanimals[k];
-    }
+	std::cout << std::endl;
+	for (int k = 0; k < 100; ++k) {
+		delete Aanimals[k];
+	}
+    std::cout << std::endl;
+	std::cout << std::endl;
 	std::cout << "<----------DEEP-COPY----------->" << std::endl;
+	std::cout << std::endl;
     // Test deep copy behavior
     Dog originalDog;
     Dog copyDog = originalDog;

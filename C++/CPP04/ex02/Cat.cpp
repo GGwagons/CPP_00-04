@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 14:36:53 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/30 13:18:53 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/30 15:37:38 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,10 @@ Cat &Cat::operator=(const Cat &copy) {
 Cat::~Cat() {
 	std::cout << "Cat destructor called" << std::endl;
 	delete _brain;
+}
+
+Brain &Cat::getBrain() const {
+	return *_brain;
 }
 
 void Cat::makeSound() const {

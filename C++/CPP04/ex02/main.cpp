@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 14:31:42 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/30 20:15:26 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/31 10:13:44 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,7 @@ int main() {
 	std::cout << std::endl;
     Cat copyCat = originalCat;
 	std::cout << "<----------DEEP-COPY-TEST---------->" << std::endl;
+
+	// const AAnimal* animal = new AAnimal();	
 	return 0;
 }

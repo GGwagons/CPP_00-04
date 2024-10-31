@@ -44,11 +44,6 @@ AAnimal::~AAnimal() {
 	std::cout << "AAnimal destructor called" << std::endl;
 }
 
-// void AAnimal::makeSound() const {
-// 	if (_type == "Dog")
-// 		std::cout << "Woof" << std::endl;
-// 	else if (_type == "Cat")
-// 		std::cout << "Meow" << std::endl;
-// 	else
-// 		std::cout << "Unknown Aanimal sound" << std::endl;
+//void AAnimal::makeSound() const {
+// 	std::cout << "Unknown Aanimal sound" << std::endl;
 // }

@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 14:32:44 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/29 14:46:45 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/31 09:27:49 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,5 @@ Animal::~Animal() {
 }
 
 void Animal::makeSound() const {
-	if (_type == "Dog")
-		std::cout << "Woof" << std::endl;
-	else if (_type == "Cat")
-		std::cout << "Meow" << std::endl;
-	else
-		std::cout << "Unknown animal sound" << std::endl;
+	std::cout << "Unknown animal sound" << std::endl;
 }

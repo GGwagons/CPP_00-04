@@ -6,7 +6,7 @@
 /*   By: miturk <miturk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 14:31:42 by miturk            #+#    #+#             */
-/*   Updated: 2024/10/30 20:15:11 by miturk           ###   ########.fr       */
+/*   Updated: 2024/10/31 09:40:35 by miturk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,9 @@ int main() {
 	Dog dog4(dog2);
 	std::cout << dog1.getBrain().getIdea(0) << std::endl;
 	std::cout << dog4.getBrain().getIdea(0) << std::endl;
+	dog3.getBrain().setIdea(0, "Nice evaluation so far");
+	std::cout << dog1.getBrain().getIdea(0) << std::endl;
+	std::cout << dog3.getBrain().getIdea(0) << std::endl;
 	std::cout << std::endl;
 	std::cout << std::endl;
 	std::cout << "<----------DEEP-COPY-TEST---------->" << std::endl;
